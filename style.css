@@ -51,9 +51,6 @@ main img {
   flex: 2;
 }
 
-.about-img {
-  width: 97%;
-}
 
 /* -------  Navigation ------- */
 
@@ -164,7 +161,7 @@ footer p {
 
   form button {
     /*make the button smaller and add some space above it*/
-    text-size-adjust: 10%;
+    text-size-adjust: 100%;
     max-width: 180px;
     min-width: 65px;
     width: 10%;
@@ -197,6 +194,23 @@ footer p {
     justify-content: flex-end;
   }
 
+  @media all and (max-width: 750px) {
+
+    
+    form {
+      justify-content: space-evenly;
+      padding-left: 10px;
+    }
+
+    form label {
+      font-size: 10px;
+      margin: 0 10px;
+    }
+
+    form div {
+      width: 50px;
+    }
+  }
 
   @media all and (max-width: 635px) {
     .logo {
@@ -212,31 +226,48 @@ footer p {
       font-size:12px;
     }
 
-    form {
-      justify-content: space-evenly;
-      padding-left: 10px;
-    }
-
-    form label {
-      font-size: 10px;
-      margin: 0 10px;
-    }
-
-    form div {
-      width: 50px;
-    }
 
     header nav ul li a {
       font-size: 14px;
     }
+
+    #about .group {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .p-double {
+      /*double the width of the text area in the about section and make it more centered vertically*/
+      flex: 2;
+      padding: 2%;
+      display: flex;
+      align-items: center;
+      margin-right: 0;
+      padding-right: 0px;
+    }
   }
 
   /*About section*/
+
+
+
   #about .group {
+    display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 40px !important;
   }
+
   .about-img {
-    width: 15%;
+    min-width: 100%;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    margin-left: 0 !important;
+    padding: 0;
   }
   .item {
     flex: 1;
@@ -245,7 +276,11 @@ footer p {
   .p-double {
     /*double the width of the text area in the about section and make it more centered vertically*/
     flex: 2;
-    padding-top: 60px;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    padding-right: 0;
+    height: 50%
   }
 
   /*Ideas section*/
